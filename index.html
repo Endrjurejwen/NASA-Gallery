@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NASA Gallery</title>
+  <link href="style.css" rel="stylesheet"></head>
+
+  <body class="grid-container">
+    <header class="header">
+      <form class="search">
+        <input
+          type="text"
+          class="search__field u-margin-right-sm"
+          placeholder="Explore NASA photos"
+        />
+        <button class="btn btn--icon">
+          <svg
+            class="u-margin-right-xs"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <symbol id="icon-magnifying-glass">
+              <title>Magnifying glass</title>
+              <path
+                d="M17.545 15.467l-3.779-3.779c0.57-0.935 0.898-2.035 0.898-3.21 0-3.417-2.961-6.377-6.378-6.377s-6.186 2.769-6.186 6.186c0 3.416 2.961 6.377 6.377 6.377 1.137 0 2.2-0.309 3.115-0.844l3.799 3.801c0.372 0.371 0.975 0.371 1.346 0l0.943-0.943c0.371-0.371 0.236-0.84-0.135-1.211zM4.004 8.287c0-2.366 1.917-4.283 4.282-4.283s4.474 2.107 4.474 4.474c0 2.365-1.918 4.283-4.283 4.283s-4.473-2.109-4.473-4.474z"
+              ></path>
+            </symbol>
+            <use href="#icon-magnifying-glass"></use>
+          </svg>
+          <span>Search</span>
+        </button>
+      </form>
+    </header>
+
+    <div class="modal-wrapper"></div>
+
+    <section class="section-gallery">
+      <div class="gallery">
+        <div class="gallery__photos-container"></div>
+        <div class="gallery__pagination-box u-margin-top-xl"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="copyright">
+        &copy; Copyright 2018 by Andrzej Kruk. Powered by images.nasa.gov
+      </p>
+    </footer>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>
