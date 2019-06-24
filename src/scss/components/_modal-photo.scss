@@ -1,0 +1,50 @@
+
+.modal-wrapper {
+	position: fixed;
+	z-index: 999;
+}
+
+.modal-photo {
+	// grid-column: full-start / full-end;
+	
+	overflow: auto;
+	
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .95);
+
+	&__container {
+		max-width: 50%;
+		//height: auto;
+		margin: 0 auto;
+		margin-top: 5%;
+		position: relative;
+
+		@include respond(tab-land) {
+			max-width: 75%;
+		}
+
+		@include respond(tab-port) {
+			max-width: 90%;
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		// max-height: 65rem;
+		//object-fit: cover;
+	}
+
+	&__description {
+		color: $color-white;
+		font-size: 1.6rem;
+	}
+
+	&__btn {
+		position: absolute;
+		right: 0;
+		font-size: 4.5rem;
+		border: none;
+	}
+}

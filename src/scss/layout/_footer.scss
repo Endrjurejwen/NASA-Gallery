@@ -1,0 +1,11 @@
+.footer {
+	@include flex-center;
+
+	// Grid
+	grid-column: full-start / full-end;
+
+	// Color
+	background-color: rgba($color-primary-dark, 1);
+	color: darken($color-white, 15%);
+	font-size: 1.4rem;
+}

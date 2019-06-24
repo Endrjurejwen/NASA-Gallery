@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Rajdhani');
+
+body {
+	// Text
+	font-family: var(--default-font);
+	font-weight: 400;
+	line-height: var(--line-height);
+}
+
+.heading-4 {
+	color: $color-white;
+	font-size: 2.4rem;
+
+	font-weight: inherit;
+}

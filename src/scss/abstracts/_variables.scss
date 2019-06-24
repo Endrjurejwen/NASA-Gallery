@@ -1,0 +1,62 @@
+
+/****************************/
+	// FONTS
+/****************************/
+:root {
+	--default-font: 'Rajdhani', sans-serif;
+	--heading-font: 'Maven Pro', sans-serif;
+
+	--line-height: 2.4rem;
+
+	--text-xxs: .6rem;
+	--text-xs: 1.2rem;
+	--text-sm: 1.8rem;
+	--text-md: 2.4rem;
+	--text-lg: 3.6rem;
+	--text-xl: 4.8rem;
+	--text-xxl: 6rem;
+	--text-huge: 7.2rem;
+}
+
+
+
+/****************************/
+	// COLORS
+/****************************/
+$color-primary: rgb(30,30,30);
+$color-primary-dark: darken($color-primary, 20%);
+$color-primary-light: lighten($color-primary, 20%);
+
+$color-secondary-light: #e8eee8;
+
+$color-white: #f7f9f7;
+
+
+
+
+/****************************/
+	// SPACING
+/****************************/
+:root {
+	--space-unit: 2.4rem;
+
+	--space-xxs: calc(var(--space-unit) * .25); // 6x
+	--space-xs: calc(var(--space-unit) * .5); // 12px
+	--space-sm: calc(var(--space-unit) * .75); // 16px
+	--space-md: var(--space-unit); // 24px
+	--space-lg: calc(var(--space-unit) * 2); // 48px
+	--space-xl: calc(var(--space-unit) * 3); // 72x
+	--space-xxl: calc(var(--space-unit) * 4); // 96px
+	--space-huge: calc(var(--space-unit) * 5); // 120px
+}
+
+
+
+/****************************/
+	// GRID
+/****************************/
+:root {
+	--grid-columns: 12;
+	--grid-margin-min: 2.5rem;
+	--grid-column-max-width: 10.8rem;
+}

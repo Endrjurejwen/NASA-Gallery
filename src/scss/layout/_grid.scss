@@ -1,0 +1,9 @@
+.grid-container {
+	// Grid
+	display: grid;
+	grid-template-rows: 12vh minmax(calc(100vh - (12vh + 15vh)), min-content) 15vh;
+	grid-template-columns: [full-start] minmax(var(--grid-margin-min), 1fr) [center-start] repeat(var(--grid-columns), [col-start] minmax(min-content, var(--grid-column-max-width)) [col-end]) [center-end] minmax(var(--grid-margin-min), 1fr) [full-end];
+}
+
+
+

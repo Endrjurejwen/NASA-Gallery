@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+	// Box Model
+	box-sizing: inherit;
+	margin: 0px;
+	padding: 0px; 
+}
+
+html {
+	// Text
+	font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+	@include respond(phone) {
+		font-size: 56%;
+	}
+}
+
+body {
+	// Box Model
+	box-sizing: border-box;
+
+	// max-width: 130rem;
+	// margin: 5rem auto;
+
+	// Color
+	background-image: linear-gradient(to right, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../img/cosmos-bg.jpg);
+	background-size: cover;
+	background-position: center bottom;
+	background-attachment: fixed;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}

@@ -1,0 +1,13 @@
+.header {
+	@include flex-center;
+
+	// Grid
+	grid-column: full-start / full-end;
+
+	// Positioning
+	position: relative;
+	
+	// Background
+	// background-color: rgba($color-primary-dark, .8);
+	background-color: transparence;
+}

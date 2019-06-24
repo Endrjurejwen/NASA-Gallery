@@ -1,0 +1,32 @@
+.search {
+	@include flex-center;
+	
+	&__field {
+		align-self: stretch;
+		background-color: transparent;
+		padding: 0 3rem;
+		border: none;
+		border-bottom: 1px solid rgba($color-white, .8);
+
+		color: $color-white;
+		font-family: var(--default-font);
+		font-size: 1.8rem;
+
+		transition: all .2s;
+
+		&::placeholder {
+			color: rgba($color-white, .8);
+		}
+
+		&:focus {
+			border-bottom-color: $color-white;
+			outline: none;
+		}
+	}
+
+	&__icon {
+		width: 2rem;
+		height: 2rem;
+		fill: currentColor;
+	}
+}

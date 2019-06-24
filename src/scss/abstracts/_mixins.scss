@@ -1,0 +1,66 @@
+// GRID
+@mixin grid($column-gap, $row-gap: $column-gap) {
+	@supports(grid-area: auto) {
+		display: grid;
+		grid-column-gap: $column-gap;
+		grid-row-gap: $row-gap;
+	}
+}
+
+@mixin gridAuto ($min-width) {
+  @supports(grid-area: auto) {
+    grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  }
+}
+
+// FLEX CENTER
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// BACKGROUND GRADIENT
+@mixin background-gradient($start-color, $end-color, $orientation) {
+
+	@if $orientation == 'vertical' {
+		background: linear-gradient(to bottom, $start-color, $end-color)
+	} @else if $orientation == 'horizontal' {
+		background: linear-gradient(to right, $start-color, $end-color)
+	}
+}
+
+
+//MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Normal styles
+1800px +        Big Desktop
+
+
+$Breakpoint argument chocies:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: base + typography > general layout + grid > components
+
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) { @content }; //600px
+	}
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 56.25em) { @content };  //900px
+	}
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 75em) { @content }; //1200px
+	}
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 112.5em) { @content }; //1800px
+	}
+}

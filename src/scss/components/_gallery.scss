@@ -1,0 +1,103 @@
+.gallery {
+  &__photos-container {
+    @include grid(5rem);
+    @include gridAuto(30rem);
+
+    // Grid
+    grid-auto-rows: 30rem;
+  }
+
+  &__item {
+    @include flex-center;
+
+    position: relative;
+    border: 0.1rem solid rgba($color-white, 0.7);
+
+    overflow: hidden;
+
+    transition: all 0.2s;
+
+    // Other
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  }
+
+  &__photo {
+    // Display & Box Model
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: all 0.2s;
+
+    filter: saturate(30%) brightness(30%);
+  }
+
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 30rem;
+    transition: all 0.2s 0.1s;
+  }
+
+  &__title {
+    align-self: center;
+    padding: 1.2rem 2.4rem;
+    border-bottom: 1px solid $color-white;
+    text-align: center;
+    transform: translateY(3rem);
+    transition: all 0.2s;
+  }
+
+  &__description {
+    opacity: 0;
+    color: $color-white;
+    font-size: 1.4rem;
+    transition: all 0.2s;
+    transform: translateY(3rem);
+  }
+
+  &__btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.2s;
+    transform: translateY(3rem);
+  }
+
+  // &__btn-box button:last-child {
+  //   margin-left: auto;
+  // }
+
+  &__item:hover {
+    border-color: $color-white;
+  }
+
+  &__item:hover &__photo {
+    transform: scale(1.1);
+    filter: saturate(30%) brightness(35%);
+  }
+
+  &__item:hover &__description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__item:hover &__title {
+    transform: translateY(0);
+  }
+
+  &__item:hover &__btn-box {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__pagination-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  // &__pagination-box button:last-child { margin-left: auto; }
+}

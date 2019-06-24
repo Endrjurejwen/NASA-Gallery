@@ -1,0 +1,39 @@
+.btn {
+	@include flex-center;
+
+	// Text
+	font-family: inherit;
+	text-align: center;
+
+	// Other
+	cursor: pointer;
+
+	border: .1rem solid;
+	border-radius: 4px;
+	background-color: transparent;
+	padding: 0.5rem 2rem;
+
+	color: rgba($color-white, .8);
+	font-size: 1.8rem;
+	transition: color .2s;
+	
+	&:active,
+	&:focus {
+		// Color
+		outline: none;
+	}
+
+	&:focus,
+	&:hover {
+		color: $color-white;
+	}
+
+	&--icon {
+
+		svg {
+			width: 2rem;
+			height: 2rem;
+			fill: currentColor;
+		}
+	}
+}
