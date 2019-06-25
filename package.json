@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "webpack --config webpack.dev.js --watch",
     "start": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://Endrjurejwen.github.io/Nasa-Gallery",
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "babel-core": "^6.26.3",
@@ -35,6 +37,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "gh-pages": "^2.0.1"
   }
 }
