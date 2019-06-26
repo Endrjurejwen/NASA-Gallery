@@ -1,4 +1,4 @@
-# Klasa Polityczna
+# NASA Gallery
 
 Web application with search engine powered NASA Api
 
